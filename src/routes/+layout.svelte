@@ -19,7 +19,7 @@
 
 <div class="navbar bg-base-200">
 	<div class="flex-1">
-		<a href="/" class="btn btn-ghost normal-case text-xl mr-4">svelte-pocketbase-v2</a>
+		<a href="/" class="btn btn-ghost normal-case text-xl mr-4">pocket-kit</a>
 		<div class="dropdown dropdown-hover">
 			<label tabindex="0" class="btn bg-base-200 border-transparent m-1">Components</label>
 			<ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-300 rounded-box w-52">

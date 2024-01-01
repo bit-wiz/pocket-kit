@@ -12,7 +12,7 @@ If you are looking to find that one specific record that matches a certain param
 
 ```typescript
 <script>
-  import { FirstListItem } from 'svelte-pocketbase-v2';
+  import { FirstListItem } from 'pocket-kit';
 </script>
 
 <FirstListItem

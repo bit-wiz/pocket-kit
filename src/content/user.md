@@ -16,7 +16,7 @@ To access the user's data, just use the `let:user` directive to pass it down to 
 
 ```typescript
 <script>
-  import { User } from 'svelte-pocketbase-v2';
+  import { User } from 'pocket-kit';
 </script>
 
 <User let:user>

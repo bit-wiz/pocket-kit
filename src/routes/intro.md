@@ -1,5 +1,5 @@
 ---
-title: svelte-pocketbase-v2
+title: pocket-kit
 nextUrl: '/record'
 nextButton: 'Record'
 ---
@@ -8,14 +8,14 @@ nextButton: 'Record'
 
 **Supercharge your Sveltekit + PocketBase project!**
 
-**svelte-pocketbase-v2** is the perfect companion to your next Sveltekit + PocketBase project. This library provides declarative components that effortlessly query data from your PocketBase database.
+**pocket-kit** is the perfect companion to your next Sveltekit + PocketBase project. This library provides declarative components that effortlessly query data from your PocketBase database.
 
 ## Getting Started
 
 ```bash
-# install svelte-pocketbase-v2 with pnpm, npm or yarn
+# install pocket-kit with pnpm, npm or yarn
 
-pnpm i -D svelte-pocketbase-v2
+pnpm i -D pocket-kit
 ```
 
 ## PocketBase Store
@@ -26,7 +26,7 @@ To get started, instantiate a new `pbStore` in a `+page.svelte` or `+layout.svel
 // src/+layout.svelte OR src/+page.svelte
 <script>
   import PocketBase from 'pocketbase';
-  import { pbStore } from 'svelte-pocketbase-v2';
+  import { pbStore } from 'pocket-kit';
   import { env } from '$env/dynamic/public';
 
   pbStore.set(env.PUBLIC_POCKETBASE_URL);
@@ -40,7 +40,7 @@ The `pbStore` is the ultimate marriage of PocketBase and Svelte `Writable` magic
 ```typescript
 // src/+page.svelte
 <script>
-  import { pbStore } from 'svelte-pocketbase-v2';
+  import { pbStore } from 'pocket-kit';
   let id = "RECORD_ID"
 
   const record = $pbStore.collection('categories').getOne('RECORD_ID');

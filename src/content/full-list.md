@@ -14,7 +14,7 @@ By default, the component will return a `batch` of 100 records, but you are free
 
 ```typescript
 <script>
-  import { FullList } from 'svelte-pocketbase-v2';
+  import { FullList } from 'pocket-kit';
 </script>
 
 <FullList collection="posts" batch={50} let:records>

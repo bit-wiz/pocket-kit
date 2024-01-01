@@ -10,7 +10,7 @@ nextButton: 'List'
 
 ```typescript
 <script>
-  import { Record } from 'svelte-pocketbase-v2';
+  import { Record } from 'pocket-kit';
 </script>
 
 <Record collection="posts" id="RECORD_ID" let:record >

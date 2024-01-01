@@ -1,17 +1,17 @@
-# svelte-pocketbase-v2
+# pocket-kit
 
 > Hold up! This library is currently experimental, and in early
 > development. Be careful if you intend on using this in production.
 
 **Supercharge your Sveltekit + PocketBase project!**
 
-**svelte-pocketbase-v2** is the perfect companion to your next Sveltekit + PocketBase project. This library provides declarative components that effortlessly query data from your PocketBase database.
+**pocket-kit** A minimal, yet powerful library that puts Pocketbase (realtime as well) data into Svelte stores.
 
 ## Getting Started
 
 ```bash
-# install svelte-pocketbase-v2 with pnpm, npm or yarn
-pnpm i -D svelte-pocketbase-v2
+# install pocket-kit with pnpm, npm or yarn
+pnpm i -D pocket-kit
 ```
 
 ## PocketBase Store
@@ -23,7 +23,7 @@ To get started, instantiate a new `pbStore` in a `+page.svelte` or `+layout.svel
 
 <script>
   import PocketBase from 'pocketbase';
-  import { pbStore } from 'svelte-pocketbase-v2';
+  import { pbStore } from 'pocket-kit';
   import { env } from '$env/dynamic/public';
 
   pbStore.set(env.PUBLIC_POCKETBASE_URL);
@@ -37,7 +37,7 @@ The `pbStore` is the ultimate marriage of PocketBase and Svelte `Writable` magic
 ```typescript
 // src/+page.svelte
 <script>
-  import { pbStore } from 'svelte-pocketbase-v2';
+  import { pbStore } from 'pocket-kit';
   let id = "RECORD_ID"
 
   const record = $pbStore.collection('categories').getOne('RECORD_ID');
@@ -60,6 +60,7 @@ This is a fair amount of boilerplate for simply retrieving a bit of data from yo
 - `List`
 - `FullList`
 - `FirstListItem`
+- `RLT` (Realtime) [Docs will be updated for this soon]
 
 Every data retrieval component receives a `collection` prop, and an optional `query` prop that can be used to sort and filter the results. Each component also contains an `error` slot that can be used to notify the user.
 
@@ -69,7 +70,7 @@ Every data retrieval component receives a `collection` prop, and an optional `qu
 
 ```typescript
 <script>
-  import { Record } from 'svelte-pocketbase-v2';
+  import { Record } from 'pocket-kit';
 </script>
 
 <Record collection="posts" id="RECORD_ID" let:record >
@@ -149,7 +150,7 @@ You can also pass content to the `pages slot` provided that you also include a p
 
 ```typescript
 <script>
-  import { FullList } from 'svelte-pocketbase-v2';
+  import { FullList } from 'pocket-kit';
 </script>
 
 <FullList collection="posts" batch={50} let:records>
@@ -168,7 +169,7 @@ By default, the component will return a `batch` of 100 records, but you are free
 
 ```typescript
 <script>
-  import { FirstListItem } from 'svelte-pocketbase-v2';
+  import { FirstListItem } from 'pocket-kit';
 </script>
 
 <FirstListItem
@@ -186,7 +187,7 @@ If you are looking to find that one specific record that matches a certain param
 
 ```typescript
 <script>
-  import { User } from 'svelte-pocketbase-v2';
+  import { User } from 'pocket-kit';
 </script>
 
 <User let:user>
