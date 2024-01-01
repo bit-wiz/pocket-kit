@@ -1,11 +1,11 @@
 {
 	"name": "pocket-kit",
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"author": "algo-uno",
 	"license": "MIT",
 	"repository": {
-	  "type": "git",
-	  "url": "https://github.com/bit-wiz/pocket-kit"
+		"type": "git",
+		"url": "https://github.com/bit-wiz/pocket-kit"
 	},
 	"scripts": {
 		"dev": "vite dev",
